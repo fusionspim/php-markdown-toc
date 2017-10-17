@@ -1,0 +1,12 @@
+{
+  "name": "fusionspim/php-markdown-toc",
+  "type": "library",
+  "require": {
+    "php": "^7.0",
+    "michelf/php-markdown": "^1.6",
+    "illuminate/support": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {"Fusions\\Viewhelpers\\":"src/"}
+  }
+}
