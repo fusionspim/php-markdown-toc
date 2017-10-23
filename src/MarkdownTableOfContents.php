@@ -1,5 +1,5 @@
 <?php
-namespace Fusions\Viewhelpers;
+namespace Fusions\PhpMarkdownToc;
 
 class MarkdownTableOfContents
 {

@@ -1,7 +1,7 @@
 <?php
-namespace FusionsTests\Viewhelpers;
+namespace FusionsTests\PhpMarkdownToc;
 
-use Fusions\Viewhelpers\MarkdownTableOfContents;
+use Fusions\PhpMarkdownToc\MarkdownTableOfContents;
 use PHPUnit\Framework\TestCase;
 
 class MarkdownTableOfContentsTest extends TestCase
