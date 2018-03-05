@@ -1,3 +1,7 @@
 /vendor/
 tests/output/*
 .idea
+composer.lock
+composer.phar
+vendor
+
