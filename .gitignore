@@ -1,6 +1,9 @@
 /vendor/
 tests/output/*
 .idea
+.php_cs.cache
+cs_fixer_tmp_*
+
 composer.lock
 composer.phar
 vendor

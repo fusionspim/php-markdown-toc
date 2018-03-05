@@ -6,7 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 class MarkdownTableOfContentsTest extends TestCase
 {
-
     public function testProcess()
     {
         $actualMarkdown   = file_get_contents(TEST_FIXTURE_DIR . 'markdown/sample.md');
