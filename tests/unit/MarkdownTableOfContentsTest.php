@@ -8,7 +8,7 @@ class MarkdownTableOfContentsTest extends TestCase
 {
     public function testProcess()
     {
-        $this->assertEquals(
+        $this->assertSame(
             file_get_contents(__DIR__ . '/../fixtures/sample-toc.md'),
             (new MarkdownTableOfContents(file_get_contents(__DIR__ . '/../fixtures/sample.md')))->process()
         );
