@@ -51,9 +51,10 @@ class MarkdownTableOfContents
                 ];
 
                 $markdown .= sprintf(
-                    '%s%s <a name="%s">%s</a>%s',
+                    '%s%s <a name="%s" id="%s">%s</a>%s',
                     $matches['prespace'] ?? '',
                     $matches['level'],
+                    $anchor,
                     $anchor,
                     trim($matches['title']),
                     $matches['postspace'] ?? ''
