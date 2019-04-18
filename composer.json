@@ -1,6 +1,7 @@
 {
   "name": "fusionspim/php-markdown-toc",
   "type": "library",
+  "license": "MIT",
   "require": {
     "php": "^7.0",
     "michelf/php-markdown": "^1.6",
