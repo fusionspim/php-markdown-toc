@@ -31,7 +31,7 @@ class MarkdownTableOfContents
         return $toc . "\r\n" . $body;
     }
 
-    protected function buildLinkedMarkdown()
+    protected function buildLinkedMarkdown(): string
     {
         $markdown = '';
         $stream   = $this->stringToStream($this->markdown);

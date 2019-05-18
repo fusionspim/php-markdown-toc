@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class MarkdownTableOfContentsTest extends TestCase
 {
-    public function testProcess()
+    public function testProcess(): void
     {
         $this->assertSame(
             file_get_contents(__DIR__ . '/../fixtures/sample-toc.md'),
