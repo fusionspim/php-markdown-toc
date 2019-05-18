@@ -1,7 +1,7 @@
 {
   "name": "fusionspim/php-markdown-toc",
   "description": "Generates a table of contents for a Markdown document, based on the headings within",
-  "keywords": ["markdown", "toc", "document", "html"],
+  "keywords": ["document", "html", "markdown", "toc"],
   "license": "MIT",
   "require": {
     "php": "^7.2",
