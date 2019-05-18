@@ -1,6 +1,8 @@
 <?php
 namespace Fusions\PhpMarkdownToc;
 
+use Illuminate\Support\Str;
+
 class MarkdownTableOfContents
 {
     protected $markdown = '';
@@ -69,7 +71,7 @@ class MarkdownTableOfContents
 
     protected function getAnchorSlug(string $string): string
     {
-        $anchor = str_slug(trim($string));
+        $anchor = Str::slug(trim($string));
 
         if (isset($this->anchors[$anchor])) {
             $this->anchors[$anchor] = ($this->anchors[$anchor] + 1);
