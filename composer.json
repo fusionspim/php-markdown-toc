@@ -6,11 +6,12 @@
   "require": {
     "php": "^7.2",
     "michelf/php-markdown": "^1.8",
-    "illuminate/support": "^5.8"
+    "illuminate/support": "^5.8",
+    "ext-mbstring": "^7.2"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "2.15.*",
-    "phpunit/phpunit": "8.1.*"
+    "phpunit/phpunit": "8.1.*",
+    "fusionspim/php-cs-fixer-config": "^1.1"
   },
   "autoload": {
     "psr-4": {"Fusions\\PhpMarkdownToc\\":"src/"}

@@ -40,14 +40,14 @@ class MarkdownTableOfContents
 
         while ($line = fgets($stream)) {
             if (
-                false !== strpos($line, '#') &&
+                false !== mb_strpos($line, '#') &&
                 preg_match('/^(?P<prespace>\s+)?(?P<level>#{1,6})(?P<title>.*)(?P<postspace>\s+)?$/', $line, $matches) &&
                 isset($matches['level'], $matches['title'])
             ) {
                 $anchor = $this->getAnchorSlug($matches['title']);
 
                 $this->headings[] = [
-                    'level'  => strlen($matches['level']),
+                    'level'  => mb_strlen($matches['level']),
                     'title'  => $matches['title'],
                     'anchor' => $anchor,
                 ];
