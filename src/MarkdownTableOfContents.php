@@ -1,6 +1,8 @@
 <?php
 namespace Fusions\PhpMarkdownToc;
 
+use Illuminate\Support\Str;
+
 class MarkdownTableOfContents
 {
     protected $markdown = '';
@@ -31,21 +33,21 @@ class MarkdownTableOfContents
         return $toc . "\r\n" . $body;
     }
 
-    protected function buildLinkedMarkdown()
+    protected function buildLinkedMarkdown(): string
     {
         $markdown = '';
         $stream   = $this->stringToStream($this->markdown);
 
         while ($line = fgets($stream)) {
             if (
-                false !== strpos($line, '#') &&
+                false !== mb_strpos($line, '#') &&
                 preg_match('/^(?P<prespace>\s+)?(?P<level>#{1,6})(?P<title>.*)(?P<postspace>\s+)?$/', $line, $matches) &&
                 isset($matches['level'], $matches['title'])
             ) {
                 $anchor = $this->getAnchorSlug($matches['title']);
 
                 $this->headings[] = [
-                    'level'  => strlen($matches['level']),
+                    'level'  => mb_strlen($matches['level']),
                     'title'  => $matches['title'],
                     'anchor' => $anchor,
                 ];
@@ -69,7 +71,7 @@ class MarkdownTableOfContents
 
     protected function getAnchorSlug(string $string): string
     {
-        $anchor = str_slug(trim($string));
+        $anchor = Str::slug(trim($string));
 
         if (isset($this->anchors[$anchor])) {
             $this->anchors[$anchor] = ($this->anchors[$anchor] + 1);
