@@ -6,7 +6,7 @@
   "require": {
     "php": "^7.3",
     "michelf/php-markdown": "^1.8",
-    "illuminate/support": "^5.8 || ^6.5",
+    "illuminate/support": "^5.8 || ^6.0 || ^7.0",
     "ext-mbstring": "^7.2"
   },
   "require-dev": {
