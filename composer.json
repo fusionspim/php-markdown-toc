@@ -4,7 +4,7 @@
   "keywords": ["document", "html", "markdown", "toc"],
   "license": "MIT",
   "require": {
-    "php": "^7.3",
+    "php": ">=7.4",
     "michelf/php-markdown": "^1.8",
     "illuminate/support": "^5.8 || ^6.0 || ^7.0",
     "ext-mbstring": "^7.2"
